@@ -6,5 +6,5 @@ services:
     container_name: api-mapa
     ports:
       - "5000:5000"
-    env_file:
-      - .env
+    environment:
+    - API_PINDORAMA_URL=https://api-pindorama.onrender.com

@@ -25,3 +25,24 @@ def get_eventos():
         return response.json()
     except requests.RequestException as e:
         return {"erro": str(e)}
+
+def atualizar_artigo(artigo_id, payload):
+    try:
+        print("\n--- PATCH SEND ---")
+        print("URL:", f"{API_PINDORAMA_URL}/artigos/{artigo_id}")
+        print("PAYLOAD:", payload)
+        
+        response = requests.patch(f"{API_PINDORAMA_URL}/artigos/{artigo_id}", json=payload)
+
+        print("STATUS:", response.status_code)
+        print("BODY:", response.text)
+        print("--- END PATCH ----\n")
+
+        response.raise_for_status()
+        return response.json()
+
+    except Exception as e:
+        print("\n****** PATCH ERROR ******")
+        print(str(e))
+        print("************************\n")
+        return {"erro": str(e)}

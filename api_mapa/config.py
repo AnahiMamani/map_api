@@ -1,3 +1,3 @@
 import os
 
-API_PINDORAMA_URL = os.getenv("API_PINDORAMA_URL", "http://localhost:3000")
+API_PINDORAMA_URL = "https://api-pindorama.onrender.com"

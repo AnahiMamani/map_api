@@ -1,0 +1,20 @@
+{
+    "Recife - PE": {
+        "lat_min": -8.15,
+        "lat_max": -8.00,
+        "lon_min": -34.99,
+        "lon_max": -34.83
+    },
+    "São Paulo - SP": {
+        "lat_min": -23.90,
+        "lat_max": -23.36,
+        "lon_min": -46.83,
+        "lon_max": -46.36
+    },
+    "Guarulhos - SP": {
+        "lat_min": -23.55,
+        "lat_max": -23.38,
+        "lon_min": -46.52,
+        "lon_max": -46.34
+    }
+}
