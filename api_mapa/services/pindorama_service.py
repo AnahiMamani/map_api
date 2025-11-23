@@ -28,21 +28,12 @@ def get_eventos():
 
 def atualizar_artigo(artigo_id, payload):
     try:
-        print("\n--- PATCH SEND ---")
-        print("URL:", f"{API_PINDORAMA_URL}/artigos/{artigo_id}")
-        print("PAYLOAD:", payload)
+        # MUDANÇA AQUI: Usa a rota silenciosa
+        url = f"{API_PINDORAMA_URL}/artigos/{artigo_id}/coordenadas" 
         
-        response = requests.patch(f"{API_PINDORAMA_URL}/artigos/{artigo_id}", json=payload)
-
-        print("STATUS:", response.status_code)
-        print("BODY:", response.text)
-        print("--- END PATCH ----\n")
-
-        response.raise_for_status()
-        return response.json()
-
-    except Exception as e:
-        print("\n****** PATCH ERROR ******")
-        print(str(e))
-        print("************************\n")
-        return {"erro": str(e)}
+        response = requests.patch(url, json=payload)
+        response.raise_for_status() # Lança exceção para 4xx/5xx
+        return {"sucesso": True}
+    except requests.exceptions.RequestException as e:
+        print(f"ERRO ao fazer PATCH interno para Pindorama: {e}")
+        return {"erro": f"Falha no PATCH interno: {e}"}

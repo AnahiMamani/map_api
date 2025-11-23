@@ -1,17 +1,31 @@
 import folium
 import json
 
+from api_mapa.services.pindorama_service import get_artigos
 from api_mapa.utils.map_generator_utils import (
     load_geojson,
     darken_color,
     REGIAO_COLORS,
 )
 
-
 def generate_map_object(initial_coords=None):
     """Função que gera um objeto mapa em representação html do Folium.
     Percorre cada artigo e demonstra ele por pop-up no mapa."""
     geojson_data = load_geojson()
+
+    # Buscando os artigos do banco
+    artigos_data = get_artigos()
+
+    if "erro" in artigos_data:
+        # Se houver erro na requisição (Rails fora do ar), use uma lista vazia ou logue o erro
+        print(f"ERRO ao buscar artigos do Pindorama: {artigos_data['erro']}")
+        artigos = []
+    else:
+        # Filtra para coordenadas validas, se for so [] ele ignora tambem
+        artigos = [
+            artigo for artigo in artigos_data 
+            if artigo.get("coordenadas") and len(artigo["coordenadas"]) == 2
+        ]
 
     if initial_coords is None:
         initial_coords = [-14.235, -51.9253]
@@ -66,23 +80,6 @@ def generate_map_object(initial_coords=None):
         popup=popup_geojson,
     )
     geo_layer.add_to(m)
-
-    artigos = [
-        {
-            "id": 23,
-            "titulo": "O frevo",
-            "conteudo": "O frevo surgiu no início do século XX...",
-            "local": "Recife - PE",
-            "coordenadas": [-8.0476, -34.8770],
-        },
-        {
-            "id": 24,
-            "titulo": "Maracatu",
-            "conteudo": "O maracatu é uma manifestação musical...",
-            "local": "São Paulo - SP",
-            "coordenadas": [-23.5505, -46.6333],
-        },
-    ]
 
     icon_url = "https://leafletjs.com/examples/custom-icons/leaf-orange.png"
     artigos_layer = folium.FeatureGroup(name="Artigos")

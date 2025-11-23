@@ -5,6 +5,24 @@
         "lon_min": -34.99,
         "lon_max": -34.83
     },
+    "Olinda - PE": {
+        "lat_min": -8.05,
+        "lat_max": -7.95,
+        "lon_min": -34.89,
+        "lon_max": -34.80
+    },
+    "Salvador - BA": {
+        "lat_min": -13.04,
+        "lat_max": -12.80,
+        "lon_min": -38.60,
+        "lon_max": -38.38
+    },
+    "Feira de Santana - BA": {
+        "lat_min": -12.35,
+        "lat_max": -12.18,
+        "lon_min": -38.99,
+        "lon_max": -38.85
+    },
     "São Paulo - SP": {
         "lat_min": -23.90,
         "lat_max": -23.36,
@@ -16,5 +34,89 @@
         "lat_max": -23.38,
         "lon_min": -46.52,
         "lon_max": -46.34
+    },
+    "Rio de Janeiro - RJ": {
+        "lat_min": -23.08,
+        "lat_max": -22.75,
+        "lon_min": -43.85,
+        "lon_max": -43.10
+    },
+    "Niterói - RJ": {
+        "lat_min": -22.95,
+        "lat_max": -22.80,
+        "lon_min": -43.20,
+        "lon_max": -43.00
+    },
+    "Belo Horizonte - MG": {
+        "lat_min": -20.02,
+        "lat_max": -19.78,
+        "lon_min": -44.05,
+        "lon_max": -43.85
+    },
+    "Contagem - MG": {
+        "lat_min": -20.00,
+        "lat_max": -19.80,
+        "lon_min": -44.10,
+        "lon_max": -43.95
+    },
+    "Vitória - ES": {
+        "lat_min": -20.35,
+        "lat_max": -20.20,
+        "lon_min": -40.35,
+        "lon_max": -40.20
+    },
+    "Vila Velha - ES": {
+        "lat_min": -20.45,
+        "lat_max": -20.30,
+        "lon_min": -40.35,
+        "lon_max": -40.25
+    },
+    "Palmas - TO": {
+        "lat_min": -10.35,
+        "lat_max": -10.15,
+        "lon_min": -48.45,
+        "lon_max": -48.25
+    },
+    "Araguaína - TO": {
+        "lat_min": -7.25,
+        "lat_max": -7.10,
+        "lon_min": -48.30,
+        "lon_max": -48.15
+    },
+    "Manaus - AM": {
+        "lat_min": -3.20,
+        "lat_max": -2.85,
+        "lon_min": -60.15,
+        "lon_max": -59.85
+    },
+    "Parintins - AM": {
+        "lat_min": -2.65,
+        "lat_max": -2.55,
+        "lon_min": -56.77,
+        "lon_max": -56.70
+    },
+    "Porto Alegre - RS": {
+        "lat_min": -30.31,
+        "lat_max": -29.95,
+        "lon_min": -51.35,
+        "lon_max": -51.05
+    },
+    "Canoas - RS": {
+        "lat_min": -30.00,
+        "lat_max": -29.85,
+        "lon_min": -51.25,
+        "lon_max": -51.10
+    },
+    "Brasília - DF": {
+        "lat_min": -16.05,
+        "lat_max": -15.65,
+        "lon_min": -48.15,
+        "lon_max": -47.70
+    },
+    "Taguatinga - DF": {
+        "lat_min": -15.85,
+        "lat_max": -15.75,
+        "lon_min": -48.10,
+        "lon_max": -47.95
     }
 }
