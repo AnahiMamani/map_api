@@ -81,7 +81,7 @@ def generate_map_object(initial_coords=None):
     )
     geo_layer.add_to(m)
 
-    icon_url = "https://leafletjs.com/examples/custom-icons/leaf-orange.png"
+    icon_url = "https://i.imgur.com/URmw4Qf.png"
     artigos_layer = folium.FeatureGroup(name="Artigos")
     artigos_layer.add_to(m)
 
